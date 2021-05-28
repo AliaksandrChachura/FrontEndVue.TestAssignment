@@ -1,0 +1,19 @@
+.c-header {
+
+	height: 60px;
+	background-color: rgb(250, 249, 249);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: lightgrey solid 1px;
+
+	&__about {
+		font-size: 1.5em;
+		marging-top: 25px;
+	}
+
+	a {
+		text-decoration: none;
+		color: black;		
+	}
+}

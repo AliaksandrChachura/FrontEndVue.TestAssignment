@@ -1,0 +1,13 @@
+.c-title {
+	width: auto;
+	margin-bottom: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	h1, div {
+		width: 85%;
+		text-align: center;
+	}
+}
