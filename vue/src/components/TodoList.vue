@@ -12,9 +12,10 @@
 		</thead>
 		<tbody >
 			<todo-item
-				v-for="todo in allTasks" 
+				v-for="(todo, index) in allTasks" 
 				:key="todo.id"
 				:todo="todo"
+				:index="index + 1"
 			/>	
 			
 		</tbody>
@@ -37,10 +38,7 @@
 			TodoItem
 		},
 		computed: {
-			...mapGetters(["allTasks"])			
-		},
-		mounted() {
-			console.log();
+			...mapGetters(["allTasks"])
 		}
 	}
 </script>

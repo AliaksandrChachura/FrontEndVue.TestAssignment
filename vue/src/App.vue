@@ -13,11 +13,6 @@ import TodoList from "./components/TodoList"
 import TodoInput from "./components/TodoInput"
 
 export default {
-	data() {
-		return {
-			
-		}
-	},
 	components: {
 		TheHeader,
 		TodoList,

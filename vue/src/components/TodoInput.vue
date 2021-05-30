@@ -16,7 +16,7 @@
 			<div class="col col-2">
 			<div class="form-group">
 				<label>&nbsp;</label>
-				<button type="submit" class="input-block btn-primary btn-small" @click="addTodoI">Add</button>
+				<button type="submit" class="input-block btn-primary btn-small" @click.prevent="addTodoI">Add</button>
 			</div>
 			</div>
 		</div>
@@ -38,20 +38,17 @@
 		methods: {
 			...mapActions(["addTodo"]),
 			addTodoI() {
-				console.log(v4())
-				console.log(this.title)
-				console.log(this.description)
-				this.addTodo({
-					id: v4(),
-					title: this.title,
-					description: this.description
-				});
-				// this.title = '';
-				// this.description = '';
+				if (this.title && this.description) {
+					this.addTodo({
+						id: v4(),
+						title: this.title,
+						description: this.description
+					});
+				}
+				this.title = '';
+				this.description = '';
 			}
-		}
-		
-		
+		}		
 	};
 </script>
 
